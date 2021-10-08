@@ -1,0 +1,30 @@
+@{
+    var _listaDeAlunos = ViewBag.listDeAlunos;
+}
+<h1> Página de listagem de alunos </h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Nome</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in _listaDeAlunos)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nome</td>
+                <td>@item.Email</td>
+
+                <td>
+                    <a>Editar</a>
+                    <a>Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
